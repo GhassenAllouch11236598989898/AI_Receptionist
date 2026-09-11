@@ -1,0 +1,6 @@
+-c requirements.lock
+-r requirements.txt
+pytest>=8,<10
+pytest-asyncio>=1,<2
+ruff>=0.12,<1
+psycopg[binary]>=3.2,<4

@@ -1,0 +1,11 @@
+fastapi>=0.115,<1
+uvicorn[standard]>=0.35,<1
+pydantic>=2.11,<3
+pydantic-settings>=2.10,<3
+openai>=2,<3
+deepgram-sdk>=7,<8
+httpx>=0.28,<0.29
+twilio>=9,<10
+supabase>=2.18,<3
+python-multipart>=0.0.22,<1
+tzdata>=2025.2

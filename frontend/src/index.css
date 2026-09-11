@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+/* ── Design tokens via Tailwind v4 @theme ── */
+@theme {
+  --font-sans: "Avenir Next", "Segoe UI", ui-sans-serif, sans-serif;
+
+  /* Slate palette for backgrounds / text */
+  --color-surface-50: #ffffff;
+  --color-surface-100: #f8fbfa;
+  --color-surface-200: #eef5f3;
+  --color-surface-300: #d8e7e3;
+  --color-surface-400: #98aaa8;
+  --color-surface-500: #718684;
+  --color-surface-600: #526c6d;
+  --color-surface-700: #d8e7e3;
+  --color-surface-800: #edf7f4;
+  --color-surface-900: #f7fbfa;
+  --color-surface-950: #ffffff;
+
+  /* Primary indigo accent */
+  --color-primary-50: #e8f8f4;
+  --color-primary-100: #d4f0ea;
+  --color-primary-200: #b8e3da;
+  --color-primary-300: #82cfc1;
+  --color-primary-400: #42b3a4;
+  --color-primary-500: #159487;
+  --color-primary-600: #087f7a;
+  --color-primary-700: #076966;
+  --color-primary-800: #075552;
+  --color-primary-900: #064542;
+
+  /* Success emerald */
+  --color-success-50: #ecfdf5;
+  --color-success-100: #d1fae5;
+  --color-success-400: #34d399;
+  --color-success-500: #10b981;
+  --color-success-600: #059669;
+  --color-success-700: #047857;
+
+  /* Warning amber */
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #f59e0b;
+
+  /* Danger rose */
+  --color-danger-400: #fb7185;
+  --color-danger-500: #f43f5e;
+  --color-danger-600: #e11d48;
+}
+
+/* ── Global resets & scrollbar styling ── */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-surface-300) transparent;
+}
+
+body {
+  @apply bg-white text-surface-600 antialiased;
+  font-family: var(--font-sans);
+  margin: 0;
+  background: #ffffff;
+}
+
+/* ── Animations ── */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.4; }
+}
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in  { animation: fade-in  0.4s ease-out both; }
+.animate-pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
+.animate-slide-up { animation: slide-up 0.3s ease-out both; }
